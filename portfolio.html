@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Najmie Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="node_modules/ol/ol.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.1.0/ol.css">
+<script src="https://cdn.jsdelivr.net/npm/ol@v7.1.0/dist/ol.js"></script>
+
+
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 130px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+
+body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #map {
+        position: absolute; 
+        top: 0; 
+        right: 0; 
+        bottom: 0; 
+        left: 0;
+      }
+
+</style>
+</head>
+<body class="w3-deep-orange">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) fas fa-laptop-code-->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="muka21.jpeg" style="width:100%"; class="w3-grayscale-max">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-deep-orange">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-deep-orange">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+  <a href="#skill" class="w3-bar-item w3-button w3-padding-large w3-hover-deep-orange">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>SKILL</p>
+  </a>
+
+  <a href="#past" class="w3-bar-item w3-button w3-padding-large w3-hover-deep-orange">
+    <i class="fa fa-bolt w3-xxlarge"></i>
+    <p>EXP</p>
+  </a>
+
+  <a href="#achieve" class="w3-bar-item w3-button w3-padding-large w3-hover-deep-orange">
+    <i class="fa fa-bullhorn w3-xxlarge"></i>
+    <p>ACHIEVE</p>
+  </a>
+
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-deep-orange">
+    <i class ="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-deep-orange w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="#skill" class="w3-bar-item w3-button" style="width:25% !important">SKILLS</a>
+    <a href="#past" class="w3-bar-item w3-button" style="width:25% !important">EXP</a>
+    <a href="#achieve" class="w3-bar-item w3-button" style="width:25% !important">ACHIEVE</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-deep-orange" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Najmie Shahrin.</h1>
+    <p>Your Future Engineer and Technician.</p>
+    <img src="muka21.jpeg" alt="boy" class="w3-image w3-grayscale-max" style="width: 100%">
+  </header>
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-white">My Name</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p class="w3-text-white" >Hello there, My name is Najmie, and I am a BVI student who is honourably pursuing 
+      a bachelor's degree in electronic industrial automation. I'm a curious explorer and wanderer who 
+      genuinely enjoys learning new things. I genuinely enjoy developing my skills further until I can handle 
+      and solve any issue myself. Details about myself I can evaluate how well I lead by counting how many times 
+      I have served as group leader. Some people describe me as charismatic because of my upbeat demeanour. Get 
+      in touch with me if you want to be friends, chat, or exchange thoughts with me because I might become 
+      lonely at times.
+    </p>
+    <h3 class="w3-padding-16 w3-text-light-grey">My Biodata</h3>
+    <p class="w3-wide w3-text-black"> <strong>Name :</strong> </p>
+    <p class="w3-wide w3-text-white">Muhammad Najmie bin Shahrin</p>
+
+    <p class="w3-wide w3-text-black"> <strong>Age :</strong> </p>
+    <p class="w3-wide w3-text-white">25 Years Old</p>
+
+    <p class="w3-wide w3-text-black"> <strong>Date Of Birth :</strong> </p>
+    <p class="w3-wide w3-text-white">3rd November 1997</p>
+
+    <p class="w3-wide w3-text-black"> <strong>Studying Course :</strong> </p>
+    <p class="w3-wide w3-text-white">Bachelor Of Industrial Electronics Automation Technology With Honours</p>
+
+    <p class="w3-wide w3-text-black"> <strong>Place of Study :</strong> </p>
+    <p class="w3-wide w3-text-white">University Malaysia Pahang</p>
+
+    <p class="w3-wide w3-text-black"> <strong>E-mail :</strong> </p>
+    <p class="w3-wide w3-text-white">Najmieyun@gmail.com </p>
+    <!-- <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:95%"></div>
+    </div> -->
+
+    <!-- <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:100%"></div>
+    </div> -->
+    
+    <div class="w3-padding-64 w3-content" id="skill">
+      <h2 class="w3-text-light-grey">Skills</h2>
+      <hr style="width:200px" class="w3-opacity">
+    <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey" >
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge"> <strong>Microsoft Word</strong> </span><br>
+        Advanced
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge"><strong>Microsoft Excel</strong></span><br>
+        Intermidiate
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge"><strong>Microsoft Outlook</strong></span><br>
+        Intermidiate
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge"><strong>Phyton</strong></span><br>
+        Intermidiate
+      </div>
+    </div>
+
+    <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge"> <strong>C++</strong> </span><br>
+        Intermidiate
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge"><strong>Omron PLC</strong></span><br>
+        Advanced
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge"><strong>BOTSCH PLC</strong></span><br>
+        Beginner
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge"><strong>HTML</strong></span><br>
+        Beginner
+      </div>
+    </div>
+
+    <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge"> <strong>XAMPP</strong> </span><br>
+        Beginner
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge"><strong>CSS</strong></span><br>
+        Beginner
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge"><strong>CISCO</strong></span><br>
+        Beginner
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge"><strong>Rapberry Pi</strong></span><br>
+        Intermidiate
+      </div>
+    </div>
+  </div>
+
+    <!-- <button class="w3-button w3-light-grey w3-padding-large w3-section">
+      <i class="fa fa-download"></i> Download Resume
+    </button> -->
+    
+    <!-- Experince part -->
+    <h3 class="w3-padding-16 w3-text-light-grey" id="past">My Experience</h3>
+
+<h3 class="w3-padding-16 w3-text-light-grey">Past Project</h3>
+    <div class="w3-card-4 w3-light-grey">
+      <img src="bottleteam.jpg" style="width:50%" class="" alt="view">
+      <img src="bottle11.png" style="width:49.5%" class="" alt="view">
+      <div class="w3-container w3-center w3-black" style="width: 100%">
+        <p>PLC Bottle Stations project with digital and analog input/output - <br> build up
+          from broken machine to machine can fill and count bottle production.
+        </p>
+      </div>
+    </div>
+<br>
+    <div class="w3-card-4 w3-light-grey">
+      <img src="analog.jpg" style="width:100%" class="" alt="view">
+      <!-- <img src="bottle11.png" style="width:49.5%" class="" alt="view"> -->
+      <div class="w3-container w3-center w3-black" style="width: 100%">
+        <p>PLC OMRON analog setup - <br> setting up and learn on analog access in Omron 
+          for better result for production line.
+        </p>
+      </div>
+    </div>
+<br>
+    <div class="w3-card-4 w3-light-grey">
+      <img src="robot1.jfif" style="width:100%" class="" alt="view">
+      <!-- <img src="bottle11.png" style="width:49.5%" class="" alt="view"> -->
+      <div class="w3-container w3-center w3-black" style="width: 100%">
+        <p>Enviromental Analyzer Robot - <br> ssetting up robot for analyzing closed 
+          space enviromental condition using Arduino, ESP32 and Bluetooth Module
+        </p>
+      </div>
+    </div>
+
+    <h3 class="w3-padding-16 w3-text-light-grey">Work Experience</h3>
+    <p class="w3-wide w3-text-black"> <strong>UNIFI Installer : 2017-2019</strong> </p>
+    <p class="w3-wide w3-text-black"> <strong>Starbucks Shift Supervisor : 2019-2020</strong> </p>
+    <p class="w3-wide w3-text-black"> <strong>Loteng TC (Kitchen crew) : 2022(3 month Semester break)</strong> </p>
+
+
+<br>
+<!-- Achievement side  -->
+<h3 class="w3-padding-16 w3-text-light-grey" id="achieve">My Achievement</h3>
+<!-- <p class="w3-wide w3-text-black"> <strong>Loteng TC (Kitchen crew) : 2022(3 month Semester break)</strong> </p> -->
+
+
+<div class="w3-container w3-dark-grey" style="width: 100%">
+  <p>Program Director Bengkel MOBILEGRAPHY & VIDEOGRAPHY: 2022</p>
+</div>
+
+  <br>
+  <div class="w3-container w3-dark-grey" style="width: 100%">
+    <p>Assistant Program Director Bengkel AGM PEKA 5: 2022</p>
+
+  </div>  
+
+  <br>
+  <div class="w3-container w3-dark-grey" style="width: 100%">
+    <p>Assistant Program Director Bengkel GearUP E-sport Tour : 2022</p>
+
+  </div>  
+
+  <br>
+  <div class="w3-container w3-dark-grey" style="width: 100%">
+    <p>Assistant Program Director Karnival Sukan RP5: 2022</p>
+
+  </div> 
+
+  <br>
+  <div class="w3-container w3-dark-grey" style="width: 100%">
+    <p>Technical Director SST12 ONLINE THEATER: 2021</p>
+
+  </div> 
+
+  <br>
+  <div class="w3-container w3-dark-grey" style="width: 100%">
+    <p>Stage Manager Projek Bikin Teater(PBT): 2021</p>
+
+  </div> 
+
+  <br>
+  <!-- API -->
+  
+  <!-- Contact Section -->
+  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey">Contact Me</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> No 2 Lorong SKD 26 Taman PSJ 26100 Kuantan Pahang</p>
+      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +60 1162289438</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: Najmieyun@gmail.com</p>
+    </div><br>
+    <p>Let's get in touch. Send me a message:</p>
+
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+
+  </div>
+  <!-- End Contact Section --> 
+  </div>
+  <!-- <div class="w3-container"></div>
+    <h3 class="w3-padding-5 w3-margin-left w3-text-light-grey">Map</h3>
+    <div class="w3-padding-5 w3-content w3-text-grey" id="map">
+      <script>
+        const key = 'T3JgLiFuwUaoPHLRD9qa';
+        const source = new ol.source.TileJSON({
+          url: `https://api.maptiler.com/maps/streets-v2/tiles.json?key=${key}`,
+          tileSize: 512,
+          crossOrigin: 'anonymous'
+        });
+  
+        const attribution = new ol.control.Attribution({
+          collapsible: false,
+        });
+        
+        const map = new ol.Map({
+          layers: [
+            new ol.layer.Tile({
+              source: source
+            })
+          ],
+          controls: ol.control.defaults.defaults({attribution: false}).extend([attribution]),
+          target: 'map',
+          view: new ol.View({
+            constrainResolution: true,
+            center: ol.proj.fromLonLat([16.62662018, 49.2125578]),
+            zoom: 14
+          })
+        });
+        const layer = new ol.layer.Vector({
+  source: new ol.source.Vector({
+      features: [
+      new ol.Feature({
+          geometry: new ol.geom.Point(ol.proj.fromLonLat([16.62662018, 49.2125578])),
+      })
+      ]
+  }),
+  style: new ol.style.Style({
+      image: new ol.style.Icon({
+      anchor: [0.5, 1],
+      crossOrigin: 'anonymous',
+      src: 'https://docs.maptiler.com/openlayers/default-marker/marker-icon.png',
+      })
+  })
+  });
+  map.addLayer(layer);
+      </script>
+  
+    <script>
+         const api = {
+              key: "e9cfbfbb971a49c7852931c0c261db54",
+              base:"https://timezone.abstractapi.com/v1/current_time/?api_key="
+          }
+  
+          const searchbox = document.querySelector('.search-box');
+          searchbox.addEventListener('keypress', setQuery);
+  
+          function setQuery(evt){
+              if(evt.keyCode == 13){
+                  getResults(searchbox.value);
+              }
+          }
+  
+          function getResults(query){
+              fetch(`${api.base}${api.key}&location=${query}`)
+              .then(mytimezone => {
+                  return mytimezone.json();
+              }).then(displayResults);
+          }
+  
+          function displayResults(mytimezone){
+              let get_datetime = mytimezone.datetime;
+              const array_datetime = get_datetime.split(" ");
+              document.getElementById('mytime').innerText = array_datetime[1];
+              document.getElementById('mydate').innerText = array_datetime[0];
+              document.getElementById('timezone-name').innerText = mytimezone.timezone_name;
+              document.getElementById('timezone-location').innerText = mytimezone.timezone_location;
+              document.getElementById('timezone-abbreviation').innerText = mytimezone.timezone_abbreviation;
+          }
+  
+    </script>
+    </div>
+
+  </div> -->
+
+  
+<div>
+  <h3 style="text-align: center;">Map</h3>
+  <p style="margin-left: 200px;"><iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.1898247206163!2d103.42451523488772!3d3.543641200000012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cf513f26ae4061%3A0x1932c42255a897a0!2sUniversity%20of%20Malaysia%20Pahang!5e0!3m2!1sen!2smy!4v1674321679280!5m2!1sen!2smy" 
+    width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+  </iframe></p>
+</div>
+
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <a href="https://www.facebook.com/najmie.yun/">
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    </a>
+    <a href="https://www.instagram.com/najmieyunz/">
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/muhammad-najmie-shahrin-1a2871126/">
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </a>
+    
+    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+<!-- End footer -->
+  </footer>
+</body>
+</html>
